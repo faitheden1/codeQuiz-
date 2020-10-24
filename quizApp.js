@@ -1,33 +1,46 @@
 
-    var questions = [{
-      question: "Which built-in method removes the last element from an array and returns that element?",
-      choices: ["last()", "get()", "pop()", "none"],
-      correctAnswer: "pop()"
-    }, {
-      question: "Which built-in method returns the string representation of the number's value?",
-      choices: ["toValue()", "toNumber()", "toString()", "none"],
-      correctAnswer: "toString()"
-    }, {
-      question: "Which of the following function of Boolean object returns the primitive value of the Boolean object?",
-      choices: ["toSource()", "valueOf()", "toString()", "none"],
-      correctAnswer: "valueOf()"
-    }, {
-      question: "Which function parses a string and returns an integer?",
-      choices: ["parseInt()", "unshift()", "toString()", "splice()"],
-      correctAnswer: "parseInt()"
-    }, {
-      question: "Which method returns the first element that matches a specified CSS selector(s) in the document?",
-      choices: ["toValue()", "pop()", "parseInt()", "querySelector()"],
-      correctAnswer: "querySelector()"
-    }];
+var questions = [{
+  question: "Which built-in method removes the last element from an array and returns that element?",
+  choices: ["last()", "get()", "pop()", "none"],
+  correctAnswer: "pop()"
+}, {
+  question: "Which built-in method returns the string representation of the number's value?",
+  choices: ["toValue()", "toNumber()", "toString()", "none"],
+  correctAnswer: "toString()"
+}, {
+  question: "Which of the following function of Boolean object returns the primitive value of the Boolean object?",
+  choices: ["toSource()", "valueOf()", "toString()", "none"],
+  correctAnswer: "valueOf()"
+}, {
+  question: "Which function parses a string and returns an integer?",
+  choices: ["parseInt()", "unshift()", "toString()", "splice()"],
+  correctAnswer: "parseInt()"
+}, {
+  question: "Which method returns the first element that matches a specified CSS selector(s) in the document?",
+  choices: ["toValue()", "pop()", "parseInt()", "querySelector()"],
+  correctAnswer: "querySelector()"
+}];
+
+var currentquestion = 0;
+var currenttime = questions.length * 15;
+var timerstored;
+
+// variables to reference DOM elements
+var questions = document.querySelector("#questions");
+var timer = document.querySelector("#time");
+var choices = document.querySelector("#choices");
+var submit = document.querySelector("#submit");
+var start = document.querySelector("#start");
+// var initial = document.querySelector("#initials");
+// var feedback = document.querySelector("#feedback");
 
     //Timer
 var timerCount = 100
 var timerCount = document.querySelector("#timer")
-timerEl.textContent = timerCount
+timer.textContent = timerCount
 var timer = window.setInterval (function () {
   timerCount --;
-  timerEl.textContent = timerCount
+  timer.textContent = timerCount
   if (timerCount === 0) {
     clearInterval (timer)
   }
