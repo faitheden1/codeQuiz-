@@ -1,5 +1,4 @@
 
-(function() {
     var questions = [{
       question: "Which built-in method removes the last element from an array and returns that element?",
       choices: ["last()", "get()", "pop()", "none"],
@@ -191,4 +190,4 @@ var timer = window.setInterval (function () {
                    questions.length + ' right!!!');
       return score;
     }
-  })();
+  // )}; 
